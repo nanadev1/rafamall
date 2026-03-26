@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Topic - RafaMall Community Forum</title>
+    <meta name="description" content="Start a new discussion in the RafaMall herbal community. Share your knowledge, ask questions, and connect with fellow herbal enthusiasts.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/forum.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="wishlist.html" class="header-action">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="wishlist-count-badge cart-count" id="wishlistCountBadge">0</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="rafadoc.html">RafaDoc</a></li>
+                    <li><a href="herbal-encyclopedia.html">Herbal Encyclopedia</a></li>
+                    <li><a href="forum.html" class="active">Forum</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="nav-contact">
+                    <a href="tel:+233548205657" class="contact-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+233 54 820 5657</span>
+                    </a>
+                </div>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="category.html?cat=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="category.html?cat=essential-oils">Essential Oils</a></li>
+                        <li><a href="category.html?cat=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="category.html?cat=supplements">Supplements</a></li>
+                        <li><a href="category.html?cat=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="category.html?cat=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Create New Topic</h1>
+                <p>Start a discussion and share your herbal wisdom</p>
+            </div>
+        </section>
+
+        <!-- Create Topic Form -->
+        <section class="create-topic-section">
+            <div class="container">
+                <div class="create-topic-container">
+                    <form id="createTopicForm" class="create-topic-form">
+                        <div class="form-group">
+                            <label for="topicTitle">Topic Title *</label>
+                            <input type="text" id="topicTitle" placeholder="What would you like to discuss?" required>
+                            <span class="form-hint">Be specific and descriptive (minimum 10 characters)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="topicCategory">Category *</label>
+                            <select id="topicCategory" required>
+                                <option value="">Select a category</option>
+                                <option value="herbal-remedies">Herbal Remedies Discussion</option>
+                                <option value="plant-identification">Plant Identification Help</option>
+                                <option value="traditional-stories">Traditional Healing Stories</option>
+                                <option value="diy-recipes">DIY Herbal Recipes</option>
+                                <option value="ask-herbalist">Ask the Herbalist</option>
+                                <option value="wellness-journey">Wellness Journey</option>
+                                <option value="sustainable-harvesting">Sustainable Harvesting</option>
+                                <option value="african-herbalism">Ghanaian & African Herbalism</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="topicContent">Message *</label>
+                            <textarea id="topicContent" rows="10" placeholder="Share your knowledge, ask a question, or start a discussion..." required></textarea>
+                            <div class="editor-tools">
+                                <button type="button" class="editor-btn" data-format="bold"><i class="fas fa-bold"></i></button>
+                                <button type="button" class="editor-btn" data-format="italic"><i class="fas fa-italic"></i></button>
+                                <button type="button" class="editor-btn" data-format="link"><i class="fas fa-link"></i></button>
+                                <button type="button" class="editor-btn" data-format="list"><i class="fas fa-list"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Tags (optional)</label>
+                            <div class="tags-input-container">
+                                <input type="text" id="tagInput" placeholder="Add tags (e.g., moringa, immune-boost)">
+                                <button type="button" id="addTagBtn" class="btn btn-outline-small">Add Tag</button>
+                            </div>
+                            <div id="tagsList" class="tags-list"></div>
+                            <span class="form-hint">Add up to 5 tags to help others find your topic</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="notifyReplies">
+                                <span>Notify me when someone replies</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="termsAgree" required>
+                                <span>I agree to the <a href="terms.html" target="_blank">Community Guidelines</a> and <a href="privacy.html" target="_blank">Privacy Policy</a></span>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Post Topic <i class="fas fa-paper-plane"></i></button>
+                            <a href="forum.html" class="btn btn-outline">Cancel</a>
+                        </div>
+                    </form>
+
+                    <div class="create-topic-sidebar">
+                        <div class="guidance-card">
+                            <h3><i class="fas fa-lightbulb"></i> Tips for a Great Topic</h3>
+                            <ul>
+                                <li><strong>Be clear and specific</strong> - Help others understand what you're asking or sharing</li>
+                                <li><strong>Add details</strong> - Include your experience, what you've tried, or what you're curious about</li>
+                                <li><strong>Use proper categories</strong> - Helps your topic reach the right audience</li>
+                                <li><strong>Add relevant tags</strong> - Makes your topic searchable</li>
+                                <li><strong>Be respectful</strong> - Our community thrives on kindness and cultural respect</li>
+                            </ul>
+                        </div>
+                        <div class="guidance-card">
+                            <h3><i class="fas fa-shield-alt"></i> Community Guidelines</h3>
+                            <ul>
+                                <li>Share from personal experience when possible</li>
+                                <li>Include disclaimer for medical advice</li>
+                                <li>Respect traditional knowledge and cultural practices</li>
+                                <li>No self-promotion or spam</li>
+                                <li>Be kind and helpful</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="rafadoc.html">RafaDoc</a></li>
+                        <li><a href="herbal-encyclopedia.html">Herbal Encyclopedia</a></li>
+                        <li><a href="forum.html">Community Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 54 820 5657</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/forum.js"></script>
+    <script src="js/forum-create.js"></script>
+</body>
+</html>

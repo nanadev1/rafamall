@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RafaMall | Herbal & Natural Products</title>
+    <meta name="description" content="Learn about RafaMall's mission to provide premium herbal and natural products. Nature's best, ethically sourced and sustainably delivered.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global CSS (header, footer, nav) -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- About Page Specific CSS -->
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="shop.html?category=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="shop.html?category=essential-oils">Essential Oils</a></li>
+                        <li><a href="shop.html?category=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="shop.html?category=supplements">Supplements</a></li>
+                        <li><a href="shop.html?category=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="shop.html?category=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-content">
+                    <div class="about-hero-text">
+                        <span class="about-badge">Our Story</span>
+                        <h1>Nature's Wisdom,<br>Delivered to You</h1>
+                        <p>RafaMall was born from a simple belief: nature holds the key to true wellness. We're on a mission to bring the finest herbal and natural products from ethical sources directly to your door.</p>
+                    </div>
+                    <div class="about-hero-image">
+                        <img src="https://placehold.co/500x500/000000/FFFFFF?text=Herbal+Wellness" alt="Herbal Wellness">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To make premium herbal and natural products accessible to everyone while supporting sustainable farming practices and fair trade partnerships.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>A world where natural wellness is the first choice, not the last resort. Where communities thrive through ethical sourcing and conscious consumption.</p>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Our Values</h3>
+                        <p>Purity, transparency, sustainability, and community. Every product we offer reflects our commitment to these core principles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-image">
+                        <img src="https://placehold.co/600x500/000000/FFFFFF?text=Our+Journey" alt="Our Journey">
+                    </div>
+                    <div class="story-content">
+                        <span class="story-tag">The Journey</span>
+                        <h2>From Roots to Remedy</h2>
+                        <p>RafaMall started in 2020 when our founder, Rafa, discovered the transformative power of herbal medicine during a personal health journey. What began as a small collection of trusted herbal remedies has grown into a curated marketplace featuring over 100 premium natural products.</p>
+                        <p>Today, we partner with small-scale farmers, ethical harvesters, and certified organic producers across four continents to bring you the purest ingredients nature has to offer. Every product in our collection is carefully vetted for quality, potency, and sustainability.</p>
+                        <div class="story-stats">
+                            <div class="stat">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Products</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Partner Farms</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">10K+</span>
+                                <span class="stat-label">Happy Customers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What We Stand For</h2>
+                    <p>Principles that guide everything we do</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>100% Natural</h3>
+                        <p>No synthetic additives, fillers, or artificial ingredients. Just pure, potent botanicals.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3>Ethically Sourced</h3>
+                        <p>We work directly with farmers who practice sustainable agriculture and fair trade.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Lab Tested</h3>
+                        <p>Every batch is third-party tested for purity, potency, and safety.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h3>Eco-Friendly</h3>
+                        <p>Compostable packaging and carbon-neutral shipping whenever possible.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-chalkboard-user"></i>
+                        </div>
+                        <h3>Education First</h3>
+                        <p>We empower customers with knowledge about herbal wellness and proper usage.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Community Focused</h3>
+                        <p>1% of profits support community health initiatives and herb conservation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet Our Team</h2>
+                    <p>The passionate people behind RafaMall</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://placehold.co/300x300/000000/FFFFFF?text=Rafa" alt="Rafa - Founder">
+                        </div>
+                        <div class="team-info">
+                            <h3>Rafa Adeleke</h3>
+                            <span class="team-title">Founder & CEO</span>
+                            <p>A certified herbalist with 10+ years of experience in natural medicine and sustainable sourcing.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://placehold.co/300x300/000000/FFFFFF?text=Dr.+Sarah" alt="Dr. Sarah">
+                        </div>
+                        <div class="team-info">
+                            <h3>Dr. Sarah Chen</h3>
+                            <span class="team-title">Head of Product Quality</span>
+                            <p>PhD in Pharmacognosy with expertise in botanical medicine quality control and standardization.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://placehold.co/300x300/000000/FFFFFF?text=Michael" alt="Michael">
+                        </div>
+                        <div class="team-info">
+                            <h3>Michael Okafor</h3>
+                            <span class="team-title">Sustainability Director</span>
+                            <p>Leading our ethical sourcing initiatives and farmer partnership programs across Africa.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Customers Say</h2>
+                    <p>Trusted by thousands on their wellness journey</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The quality of RafaMall's products is exceptional. I've been using their ashwagandha for 3 months and the difference in my stress levels is remarkable."</p>
+                        <div class="testimonial-author">
+                            <strong>— Sarah M.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Finally found a source for organic herbs I can trust. The packaging is sustainable and shipping is always fast. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <strong>— James K.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Their customer service is amazing. I had questions about which tea blend would help with sleep, and they provided personalized recommendations."</p>
+                        <div class="testimonial-author">
+                            <strong>— Amara O.</strong>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Join Our Herbal Community</h2>
+                    <p>Subscribe to get wellness tips, exclusive offers, and new product announcements.</p>
+                    <form class="cta-form" id="aboutNewsletterForm">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

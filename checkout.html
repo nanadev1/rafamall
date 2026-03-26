@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - RafaMall | Herbal & Natural Products</title>
+    <meta name="description" content="Complete your purchase securely at RafaMall.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global CSS (header, footer, nav) -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Checkout Page Specific CSS -->
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="shop.html?category=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="shop.html?category=essential-oils">Essential Oils</a></li>
+                        <li><a href="shop.html?category=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="shop.html?category=supplements">Supplements</a></li>
+                        <li><a href="shop.html?category=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="shop.html?category=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Checkout</h1>
+                <p>Complete your purchase securely</p>
+            </div>
+        </section>
+
+        <!-- Checkout Steps -->
+        <div class="checkout-steps">
+            <div class="container">
+                <div class="steps-container">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Shipping</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Confirm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Section -->
+        <section class="checkout-section">
+            <div class="container">
+                <!-- Empty Cart Message -->
+                <div id="emptyCheckout" class="empty-cart" style="display: none;">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>Add some items to your cart before checking out.</p>
+                    <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+                </div>
+
+                <!-- Checkout Content -->
+                <div id="checkoutContent" class="checkout-layout" style="display: none;">
+                    <!-- Checkout Form -->
+                    <div class="checkout-form" id="shippingForm">
+                        <h2>Shipping Information</h2>
+                        
+                        <form id="checkoutForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" name="fullName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country *</label>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="US">United States</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="UK">United Kingdom</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="GH">Ghana</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" name="address" placeholder="Street address or P.O. Box" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State / Province *</label>
+                                    <input type="text" id="state" name="state" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">Postal Code *</label>
+                                    <input type="text" id="zip" name="zip" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="notes">Order Notes (Optional)</label>
+                                <textarea id="notes" name="notes" rows="3" placeholder="Special instructions for delivery..."></textarea>
+                            </div>
+                            
+                            <div class="shipping-methods">
+                                <h3>Shipping Method</h3>
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="standard" checked>
+                                    <div class="shipping-details">
+                                        <span class="shipping-name">Standard Shipping</span>
+                                        <span class="shipping-time">3-5 business days</span>
+                                        <span class="shipping-price">$5.99</span>
+                                    </div>
+                                </label>
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="express">
+                                    <div class="shipping-details">
+                                        <span class="shipping-name">Express Shipping</span>
+                                        <span class="shipping-time">1-2 business days</span>
+                                        <span class="shipping-price">$12.99</span>
+                                    </div>
+                                </label>
+                                <label class="shipping-option">
+                                    <input type="radio" name="shipping" value="free">
+                                    <div class="shipping-details">
+                                        <span class="shipping-name">Free Shipping</span>
+                                        <span class="shipping-time">5-7 business days</span>
+                                        <span class="shipping-price">$0.00</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <a href="cart.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to Cart</a>
+                                <button type="button" id="continueToPayment" class="btn btn-primary">Continue to Payment <i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Payment Form (Hidden Initially) -->
+                    <div class="checkout-form" id="paymentForm" style="display: none;">
+                        <h2>Payment Information</h2>
+                        
+                        <form id="paymentMethodForm">
+                            <div class="payment-methods">
+                                <h3>Select Payment Method</h3>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    <div class="payment-details">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                        <span>Credit / Debit Card</span>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="paypal">
+                                    <div class="payment-details">
+                                        <i class="fab fa-paypal"></i>
+                                        <span>PayPal</span>
+                                    </div>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="bank">
+                                    <div class="payment-details">
+                                        <i class="fas fa-university"></i>
+                                        <span>Bank Transfer</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div id="cardDetails" class="card-details">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiry Date</label>
+                                        <input type="text" id="expiryDate" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="123">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardName">Name on Card</label>
+                                    <input type="text" id="cardName">
+                                </div>
+                            </div>
+                            
+                            <div class="form-buttons">
+                                <button type="button" id="backToShipping" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back</button>
+                                <button type="button" id="placeOrder" class="btn btn-primary">Place Order <i class="fas fa-check"></i></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Confirmation (Hidden Initially) -->
+                    <div id="confirmation" class="confirmation" style="display: none;">
+                        <div class="confirmation-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h2>Order Confirmed!</h2>
+                        <p>Thank you for your purchase. Your order has been received.</p>
+                        <div class="order-details" id="orderDetails">
+                            <!-- Order details will be inserted here -->
+                        </div>
+                        <a href="index.html" class="btn btn-primary">Continue Shopping</a>
+                    </div>
+
+                    <!-- Order Summary Sidebar -->
+                    <aside class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="order-items" id="orderItems">
+                            <!-- Order items will be loaded via JavaScript -->
+                        </div>
+                        <div class="order-totals">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="checkoutSubtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row" id="shippingRow">
+                                <span>Shipping</span>
+                                <span id="checkoutShipping">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax (8%)</span>
+                                <span id="checkoutTax">$0.00</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="checkoutTotal">$0.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="secure-checkout">
+                            <i class="fas fa-lock"></i>
+                            <p>Secure checkout powered by SSL encryption</p>
+                        </div>
+                        
+                        <div class="guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>30-Day Guarantee</strong>
+                                <p>Not satisfied? Get a full refund</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

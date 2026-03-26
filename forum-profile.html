@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Herbalist_Amara | RafaMall Community</title>
+    <meta name="description" content="View user profile, activity, and contributions to the RafaMall herbal community.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/forum.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="wishlist.html" class="header-action">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="wishlist-count-badge cart-count" id="wishlistCountBadge">0</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="rafadoc.html">RafaDoc</a></li>
+                    <li><a href="herbal-encyclopedia.html">Herbal Encyclopedia</a></li>
+                    <li><a href="forum.html" class="active">Forum</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="nav-contact">
+                    <a href="tel:+233548205657" class="contact-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+233 54 820 5657</span>
+                    </a>
+                </div>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="category.html?cat=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="category.html?cat=essential-oils">Essential Oils</a></li>
+                        <li><a href="category.html?cat=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="category.html?cat=supplements">Supplements</a></li>
+                        <li><a href="category.html?cat=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="category.html?cat=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Profile Header -->
+        <section class="profile-header">
+            <div class="container">
+                <div class="profile-cover"></div>
+                <div class="profile-info">
+                    <div class="profile-avatar-large">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="profile-details">
+                        <h1>Herbalist_Amara</h1>
+                        <div class="profile-title">Master Herbalist</div>
+                        <div class="profile-location">
+                            <i class="fas fa-map-marker-alt"></i> Accra, Ghana
+                        </div>
+                        <div class="profile-badges">
+                            <span class="badge">🌿 Top Contributor</span>
+                            <span class="badge">🏆 Plant Expert</span>
+                            <span class="badge">📚 Knowledge Seeker</span>
+                            <span class="badge">⭐ 1 Year Member</span>
+                        </div>
+                    </div>
+                    <div class="profile-stats-large">
+                        <div class="stat">
+                            <strong>1,234</strong>
+                            <span>Posts</span>
+                        </div>
+                        <div class="stat">
+                            <strong>5,678</strong>
+                            <span>Reputation</span>
+                        </div>
+                        <div class="stat">
+                            <strong>342</strong>
+                            <span>Likes Received</span>
+                        </div>
+                        <div class="stat">
+                            <strong>Mar 2026</strong>
+                            <span>Joined</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Content -->
+        <section class="profile-content">
+            <div class="container">
+                <div class="profile-tabs">
+                    <button class="profile-tab active" data-tab="activity">Activity</button>
+                    <button class="profile-tab" data-tab="about">About</button>
+                    <button class="profile-tab" data-tab="badges">Badges & Achievements</button>
+                </div>
+
+                <!-- Activity Tab -->
+                <div id="activityTab" class="profile-tab-content active">
+                    <div class="recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon"><i class="fas fa-reply"></i></div>
+                                <div class="activity-details">
+                                    <a href="forum-topic.html">Replied to "What's the best way to prepare moringa leaves?"</a>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon"><i class="fas fa-plus-circle"></i></div>
+                                <div class="activity-details">
+                                    <a href="#">Created topic "Traditional uses of neem in Ghanaian medicine"</a>
+                                    <span class="activity-time">1 day ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon"><i class="fas fa-heart"></i></div>
+                                <div class="activity-details">
+                                    <span>Liked a post by Dr. Sarah Chen</span>
+                                    <span class="activity-time">2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon"><i class="fas fa-leaf"></i></div>
+                                <div class="activity-details">
+                                    <span>Identified a plant for NatureSeeker</span>
+                                    <span class="activity-time">3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="topics-started">
+                        <h3>Topics Started</h3>
+                        <div class="topics-list">
+                            <div class="topic-item">
+                                <a href="#">What's the best way to prepare moringa leaves for maximum benefits?</a>
+                                <div class="topic-meta">12 replies · 234 views</div>
+                            </div>
+                            <div class="topic-item">
+                                <a href="#">Traditional uses of neem in Ghanaian medicine</a>
+                                <div class="topic-meta">8 replies · 156 views</div>
+                            </div>
+                            <div class="topic-item">
+                                <a href="#">Growing medicinal herbs in small spaces</a>
+                                <div class="topic-meta">24 replies · 567 views</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Tab -->
+                <div id="aboutTab" class="profile-tab-content">
+                    <div class="about-section">
+                        <h3>About Herbalist_Amara</h3>
+                        <div class="about-bio">
+                            <p>Passionate herbalist and traditional medicine enthusiast based in Accra, Ghana. I've been studying West African medicinal plants for over 5 years and love sharing knowledge with the community.</p>
+                            <p>My grandmother was a traditional healer, and I grew up learning about the healing power of plants. I'm here to learn from others and share what I know about Ghanaian herbal traditions.</p>
+                        </div>
+                        <div class="interests">
+                            <h4>Areas of Interest</h4>
+                            <div class="interest-tags">
+                                <span>Ghanaian Herbs</span>
+                                <span>Traditional Medicine</span>
+                                <span>Plant Identification</span>
+                                <span>Herbal Remedies</span>
+                                <span>Sustainable Harvesting</span>
+                            </div>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Contact</h4>
+                            <p><i class="fas fa-envelope"></i> amara@example.com</p>
+                            <p><i class="fab fa-instagram"></i> @herbalist_amara</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badges Tab -->
+                <div id="badgesTab" class="profile-tab-content">
+                    <div class="badges-section">
+                        <h3>Achievements</h3>
+                        <div class="badges-grid">
+                            <div class="badge-card">
+                                <div class="badge-icon">🌿</div>
+                                <div class="badge-name">Top Contributor</div>
+                                <div class="badge-desc">Awarded for 100+ helpful posts</div>
+                            </div>
+                            <div class="badge-card">
+                                <div class="badge-icon">🏆</div>
+                                <div class="badge-name">Plant Expert</div>
+                                <div class="badge-desc">Recognized for plant identification skills</div>
+                            </div>
+                            <div class="badge-card">
+                                <div class="badge-icon">📚</div>
+                                <div class="badge-name">Knowledge Seeker</div>
+                                <div class="badge-desc">Completed 50+ reading hours</div>
+                            </div>
+                            <div class="badge-card">
+                                <div class="badge-icon">⭐</div>
+                                <div class="badge-name">1 Year Member</div>
+                                <div class="badge-desc">Been part of the community for 1 year</div>
+                            </div>
+                            <div class="badge-card">
+                                <div class="badge-icon">💡</div>
+                                <div class="badge-name">Helpful Healer</div>
+                                <div class="badge-desc">Received 500+ likes on posts</div>
+                            </div>
+                            <div class="badge-card">
+                                <div class="badge-icon">🌍</div>
+                                <div class="badge-name">African Wisdom Keeper</div>
+                                <div class="badge-desc">Shared traditional knowledge from Ghana</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="rafadoc.html">RafaDoc</a></li>
+                        <li><a href="herbal-encyclopedia.html">Herbal Encyclopedia</a></li>
+                        <li><a href="forum.html">Community Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 54 820 5657</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/forum.js"></script>
+    <script src="js/forum-profile.js"></script>
+</body>
+</html>

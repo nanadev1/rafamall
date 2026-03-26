@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RafaDoc - Herbal Consultation | RafaMall</title>
+    <meta name="description" content="Book a consultation with certified medical herbalists. Get personalized herbal treatment plans, wellness advice, and natural health solutions.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/rafadoc.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="wishlist.html" class="header-action">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="wishlist-count-badge cart-count" id="wishlistCountBadge">0</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="rafadoc.html" class="active">RafaDoc</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="nav-contact">
+                    <a href="tel:+233548205657" class="contact-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+233 54 820 5657</span>
+                    </a>
+                </div>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="category.html?cat=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="category.html?cat=essential-oils">Essential Oils</a></li>
+                        <li><a href="category.html?cat=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="category.html?cat=supplements">Supplements</a></li>
+                        <li><a href="category.html?cat=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="category.html?cat=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- RafaDoc Hero Section -->
+        <section class="rafadoc-hero">
+            <div class="container">
+                <div class="rafadoc-hero-content">
+                    <div class="rafadoc-hero-text">
+                        <span class="rafadoc-badge">RafaDoc</span>
+                        <h1>Expert Herbal <span class="highlight">Consultation</span></h1>
+                        <p>Connect with certified medical herbalists for personalized wellness guidance. Get professional advice tailored to your health needs from the comfort of your home.</p>
+                        <div class="rafadoc-stats">
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Expert Herbalists</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">5,000+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Satisfaction Rate</span>
+                            </div>
+                        </div>
+                        <div class="rafadoc-actions">
+                            <a href="#book-section" class="btn btn-primary">Book Consultation <i class="fas fa-calendar-check"></i></a>
+                            <a href="#how-it-works" class="btn btn-outline">How It Works <i class="fas fa-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="rafadoc-hero-image">
+                        <img src="https://placehold.co/500x500/000000/FFFFFF?text=Herbal+Consultation" alt="Herbal Consultation">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How RafaDoc Works</h2>
+                    <p>Simple steps to your personalized herbal consultation</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <div class="step-icon"><i class="fas fa-user-md"></i></div>
+                        <h3>Choose Your Herbalist</h3>
+                        <p>Browse our team of certified medical herbalists and select the expert that best matches your needs.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <div class="step-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3>Book a Session</h3>
+                        <p>Select a convenient time for your consultation. Choose from video call, phone call, or in-person visit.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <div class="step-icon"><i class="fas fa-file-medical"></i></div>
+                        <h3>Share Your Health History</h3>
+                        <p>Complete a brief health questionnaire to help your herbalist understand your needs better.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <div class="step-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Get Your Plan</h3>
+                        <p>Receive a personalized herbal treatment plan, product recommendations, and wellness guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herbalists Section -->
+        <section class="herbalists-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet Our Expert Herbalists</h2>
+                    <p>Certified professionals dedicated to your wellness journey</p>
+                </div>
+                <div class="herbalists-grid" id="herbalistsGrid">
+                    <!-- Herbalists will be loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="booking-section" id="book-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Book Your Consultation</h2>
+                    <p>Choose a package and schedule your session</p>
+                </div>
+                <div class="booking-container">
+                    <div class="booking-form-wrapper">
+                        <form id="consultationBookingForm" class="consultation-form">
+                            <div class="form-group">
+                                <label>Select Herbalist *</label>
+                                <select id="selectHerbalist" required>
+                                    <option value="">Select a herbalist</option>
+                                    <option value="Dr. Sarah Chen">Dr. Sarah Chen - Women's Health & Hormonal Balance</option>
+                                    <option value="Dr. Michael Okafor">Dr. Michael Okafor - Immune & Digestive Health</option>
+                                    <option value="Dr. Amara Adeleke">Dr. Amara Adeleke - Skin Health & Detox</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Select Package *</label>
+                                <select id="selectPackage" required>
+                                    <option value="">Select a package</option>
+                                    <option value="basic">Basic Consultation - $29 (30-min session)</option>
+                                    <option value="comprehensive">Comprehensive Plan - $79 (60-min session + follow-up)</option>
+                                    <option value="wellness">Wellness Program - $199 (4 sessions + ongoing support)</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Full Name *</label>
+                                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email Address *</label>
+                                    <input type="email" id="email" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input type="tel" id="phone" placeholder="Enter your phone number">
+                                </div>
+                                <div class="form-group">
+                                    <label>Preferred Date *</label>
+                                    <input type="date" id="appointmentDate" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Preferred Time *</label>
+                                    <select id="appointmentTime" required>
+                                        <option value="">Select time</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Consultation Type *</label>
+                                    <select id="consultationType" required>
+                                        <option value="">Select type</option>
+                                        <option value="video">Video Call</option>
+                                        <option value="phone">Phone Call</option>
+                                        <option value="in-person">In-Person (Limited Availability)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Health Concerns / Goals *</label>
+                                <textarea id="healthConcerns" rows="4" placeholder="Please describe your health concerns, goals, and any questions you have..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="termsAgree" required>
+                                    <span>I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-booking">Book Consultation <i class="fas fa-calendar-check"></i></button>
+                        </form>
+                    </div>
+                    <div class="booking-info">
+                        <div class="info-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Secure & Confidential</h3>
+                            <p>All consultations are private and HIPAA compliant. Your health information is protected.</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-undo-alt"></i>
+                            <h3>Satisfaction Guaranteed</h3>
+                            <p>Not satisfied? Get a full refund or a complimentary follow-up session.</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>Flexible Scheduling</h3>
+                            <p>Book appointments 7 days a week, including evenings and weekends.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Clients Say</h2>
+                    <p>Real stories from people who transformed their health</p>
+                </div>
+                <div class="testimonials-grid" id="testimonialsGrid">
+                    <!-- Testimonials will be loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about RafaDoc consultations</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What conditions can a medical herbalist help with?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our herbalists specialize in various areas including stress and anxiety, digestive issues, sleep disorders, hormonal imbalances, immune support, skin conditions, and general wellness optimization.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I prepare for my consultation?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Complete your health history form, list any medications you're taking, prepare questions you have, and have your health goals in mind. This helps your herbalist provide the best possible care.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is herbal medicine safe with my current medications?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our herbalists are trained in herb-drug interactions. They will review your current medications and ensure any recommendations are safe and appropriate for your situation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I get a refund if I'm not satisfied?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a 100% satisfaction guarantee. If you're not completely satisfied with your consultation, we'll provide a full refund or a complimentary follow-up session.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Start Your Wellness Journey Today</h2>
+                    <p>Book a consultation with our expert herbalists and take the first step toward natural wellness</p>
+                    <a href="#book-section" class="btn btn-primary">Book Your Consultation <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="rafadoc.html">RafaDoc</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 54 820 5657</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/rafadoc.js"></script>
+</body>
+</html>

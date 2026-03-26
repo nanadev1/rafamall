@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order - RafaMall</title>
+    <meta name="description" content="Track your order status with RafaMall. Enter your order number and email to get real-time updates.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/track-order.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="nav-contact">
+                    <a href="tel:+233548205657" class="contact-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+233 54 820 5657</span>
+                    </a>
+                </div>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="category.html?cat=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="category.html?cat=essential-oils">Essential Oils</a></li>
+                        <li><a href="category.html?cat=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="category.html?cat=supplements">Supplements</a></li>
+                        <li><a href="category.html?cat=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="category.html?cat=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Track Your Order</h1>
+                <p>Enter your order details to get real-time updates</p>
+            </div>
+        </section>
+
+        <!-- Tracking Section -->
+        <section class="tracking-section">
+            <div class="container">
+                <div class="tracking-container">
+                    <!-- Tracking Form -->
+                    <div class="tracking-form-container" id="trackingFormContainer">
+                        <div class="tracking-form-card">
+                            <div class="tracking-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h2>Where's My Order?</h2>
+                            <p>Enter your order number and email address to track your package</p>
+                            
+                            <form id="trackingForm" class="tracking-form">
+                                <div class="form-group">
+                                    <label for="orderNumber">Order Number</label>
+                                    <input type="text" id="orderNumber" placeholder="e.g., RM12345678" required>
+                                    <span class="form-hint">Found in your order confirmation email</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="orderEmail">Email Address</label>
+                                    <input type="email" id="orderEmail" placeholder="Enter the email used for order" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <i class="fas fa-search"></i> Track Order
+                                </button>
+                            </form>
+                            
+                            <div class="tracking-help">
+                                <p>Don't have your order number? <a href="account.html">Check your account</a></p>
+                                <p>Need help? <a href="contact.html">Contact Support</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tracking Result -->
+                    <div id="trackingResult" class="tracking-result" style="display: none;">
+                        <!-- Order details will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="tracking-faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Order Tracking FAQ</h2>
+                    <p>Common questions about order tracking</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>When will I receive my tracking number?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You'll receive a tracking number via email within 24-48 hours after your order is shipped. You can also find it in your account dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Why isn't my tracking number working?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>It may take up to 24 hours for the tracking information to appear in the carrier's system. If it's been longer, please contact our support team.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does shipping take?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Standard shipping: 3-5 business days. Express shipping: 1-2 business days. International shipping: 5-14 business days depending on location.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I change my delivery address?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Once an order is shipped, the address cannot be changed. Contact us immediately if you need to modify your order before shipment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 54 820 5657</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/track-order.js"></script>
+</body>
+</html>

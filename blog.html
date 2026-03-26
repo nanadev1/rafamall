@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Blog - RafaMall | Herbal & Natural Health Tips</title>
+    <meta name="description" content="Explore RafaMall's wellness blog for expert herbal tips, natural health advice, and holistic living guides. Discover the power of nature.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global CSS (header, footer, nav) -->
+    <link rel="stylesheet" href="css/global.css">
+    <!-- Blog Page Specific CSS -->
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="shop.html?category=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="shop.html?category=essential-oils">Essential Oils</a></li>
+                        <li><a href="shop.html?category=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="shop.html?category=supplements">Supplements</a></li>
+                        <li><a href="shop.html?category=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="shop.html?category=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="blog-header">
+            <div class="container">
+                <div class="blog-header-content">
+                    <span class="blog-badge">Wellness Blog</span>
+                    <h1>Nature's Wisdom</h1>
+                    <p>Explore articles on herbal remedies, natural wellness, and holistic living</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Post -->
+        <section class="featured-post">
+            <div class="container">
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://placehold.co/600x400/000000/FFFFFF?text=Herbal+Wellness+Guide" alt="Herbal Wellness Guide">
+                        <span class="featured-badge">Featured Article</span>
+                    </div>
+                    <div class="featured-content">
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar"></i> March 20, 2026</span>
+                            <span><i class="far fa-user"></i> By Dr. Sarah Chen</span>
+                            <span><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h2>The Complete Guide to Herbal Wellness: Ancient Wisdom for Modern Living</h2>
+                        <p>Discover how ancient herbal traditions can transform your modern lifestyle. From adaptogens to herbal teas, learn the fundamentals of incorporating natural remedies into your daily routine for optimal health and vitality.</p>
+                        <div class="post-tags">
+                            <span>Herbalism</span>
+                            <span>Wellness</span>
+                            <span>Guide</span>
+                        </div>
+                        <a href="blog-post.html?id=1" class="btn btn-primary">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="blog-grid-section">
+            <div class="container">
+                <div class="blog-layout">
+                    <!-- Main Content -->
+                    <div class="blog-main">
+                        <div class="blog-filters">
+                            <div class="filter-tabs">
+                                <button class="filter-btn active" data-filter="all">All Posts</button>
+                                <button class="filter-btn" data-filter="herbalism">Herbalism</button>
+                                <button class="filter-btn" data-filter="wellness">Wellness</button>
+                                <button class="filter-btn" data-filter="nutrition">Nutrition</button>
+                                <button class="filter-btn" data-filter="skincare">Skincare</button>
+                                <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+                            </div>
+                        </div>
+
+                        <div class="blog-grid" id="blogGrid">
+                            <!-- Blog posts will be loaded via JavaScript -->
+                        </div>
+
+                        <!-- Load More Button -->
+                        <div class="load-more" id="loadMore">
+                            <button class="btn btn-outline">Load More Articles <i class="fas fa-arrow-down"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="blog-sidebar">
+                        <!-- Search Widget -->
+                        <div class="sidebar-widget">
+                            <h3>Search Articles</h3>
+                            <div class="search-widget">
+                                <input type="text" id="blogSearch" placeholder="Search blog posts...">
+                                <button id="blogSearchBtn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget">
+                            <h3>Categories</h3>
+                            <ul class="category-list">
+                                <li><a href="#" data-category="all">All Posts <span>(12)</span></a></li>
+                                <li><a href="#" data-category="herbalism">Herbalism <span>(4)</span></a></li>
+                                <li><a href="#" data-category="wellness">Wellness <span>(3)</span></a></li>
+                                <li><a href="#" data-category="nutrition">Nutrition <span>(2)</span></a></li>
+                                <li><a href="#" data-category="skincare">Skincare <span>(2)</span></a></li>
+                                <li><a href="#" data-category="lifestyle">Lifestyle <span>(1)</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Popular Posts Widget -->
+                        <div class="sidebar-widget">
+                            <h3>Popular Posts</h3>
+                            <div class="popular-posts" id="popularPosts">
+                                <!-- Popular posts will be loaded via JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- Newsletter Widget -->
+                        <div class="sidebar-widget newsletter-widget">
+                            <h3>Newsletter</h3>
+                            <p>Get wellness tips and new articles delivered to your inbox.</p>
+                            <form id="blogNewsletter">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit" class="btn btn-primary">Subscribe</button>
+                            </form>
+                        </div>
+
+                        <!-- Tags Widget -->
+                        <div class="sidebar-widget">
+                            <h3>Popular Tags</h3>
+                            <div class="tags-cloud">
+                                <a href="#">Herbal Tea</a>
+                                <a href="#">Essential Oils</a>
+                                <a href="#">Adaptogens</a>
+                                <a href="#">Stress Relief</a>
+                                <a href="#">Natural Skincare</a>
+                                <a href="#">Immune Support</a>
+                                <a href="#">Sleep Aid</a>
+                                <a href="#">Digestion</a>
+                                <a href="#">Ayurveda</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Banner -->
+        <section class="blog-newsletter">
+            <div class="container">
+                <div class="newsletter-banner">
+                    <div class="newsletter-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="newsletter-text">
+                        <h3>Join Our Herbal Community</h3>
+                        <p>Subscribe to receive weekly wellness tips, herbal guides, and exclusive offers.</p>
+                    </div>
+                    <form class="newsletter-form" id="blogFooterNewsletter">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="returns.html">Returns Policy</a></li>
+                        <li><a href="shipping.html">Shipping Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RafaMall - Herbal & Natural Products</title>
+    <meta name="description" content="Shop premium herbal teas, essential oils, supplements, and natural wellness products at RafaMall. Book expert herbal consultations with RafaDoc. Explore African medicinal plants. Join our herbal community forum.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/quickview.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="wishlist.html" class="header-action">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="wishlist-count-badge cart-count" id="wishlistCountBadge">0</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="rafadoc.html">RafaDoc</a></li>
+                    <li><a href="herbal-encyclopedia.html">Herbal Encyclopedia</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="nav-contact">
+                    <a href="tel:+233548205657" class="contact-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+233 54 820 5657</span>
+                    </a>
+                </div>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="category.html?cat=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="category.html?cat=essential-oils">Essential Oils</a></li>
+                        <li><a href="category.html?cat=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="category.html?cat=supplements">Supplements</a></li>
+                        <li><a href="category.html?cat=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="category.html?cat=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Slider Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-slider">
+                    <div class="hero-slides" id="heroSlides">
+                        <!-- Slide 1 -->
+                        <div class="hero-slide active">
+                            <div class="hero-content">
+                                <div class="hero-text">
+                                    <span class="hero-badge">Limited Time Offer</span>
+                                    <h1>Up to <span class="highlight">70% Off</span><br>on Herbal Products</h1>
+                                    <p>Discover nature's finest organic herbs, teas, and wellness products. Premium quality, ethically sourced.</p>
+                                    <div class="hero-buttons">
+                                        <a href="shop.html" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                                        <a href="shop.html" class="btn btn-outline">Explore Deals</a>
+                                    </div>
+                                </div>
+                                <div class="hero-image">
+                                    <img src="https://placehold.co/500x500/000000/FFFFFF?text=Herbal+Wellness" alt="Herbal Products">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="hero-slide">
+                            <div class="hero-content">
+                                <div class="hero-text">
+                                    <span class="hero-badge">New Arrivals</span>
+                                    <h1>Organic <span class="highlight">Essential Oils</span><br>Pure & Natural</h1>
+                                    <p>Experience the power of aromatherapy with our premium essential oils. 100% pure, therapeutic grade.</p>
+                                    <div class="hero-buttons">
+                                        <a href="shop.html?category=essential-oils" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                                        <a href="shop.html" class="btn btn-outline">Learn More</a>
+                                    </div>
+                                </div>
+                                <div class="hero-image">
+                                    <img src="https://placehold.co/500x500/000000/FFFFFF?text=Essential+Oils" alt="Essential Oils">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="hero-slide">
+                            <div class="hero-content">
+                                <div class="hero-text">
+                                    <span class="hero-badge">Wellness Sale</span>
+                                    <h1>Natural <span class="highlight">Wellness</span><br>For Everyday Life</h1>
+                                    <p>Support your health journey with our curated collection of natural supplements and herbal remedies.</p>
+                                    <div class="hero-buttons">
+                                        <a href="shop.html?category=supplements" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+                                        <a href="about.html" class="btn btn-outline">Our Story</a>
+                                    </div>
+                                </div>
+                                <div class="hero-image">
+                                    <img src="https://placehold.co/500x500/000000/FFFFFF?text=Wellness+Products" alt="Wellness Products">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-dots" id="sliderDots">
+                        <button class="slider-dot active" data-slide="0"></button>
+                        <button class="slider-dot" data-slide="1"></button>
+                        <button class="slider-dot" data-slide="2"></button>
+                    </div>
+                    <button class="slider-arrow prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-arrow next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Shop by Category</h2>
+                    <p>Explore our curated collections</p>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card"><div class="category-icon"><i class="fas fa-mug-hot"></i></div><h3>Herbal Teas</h3><p>Soothing blends for wellness</p><a href="category.html?cat=herbal-teas">Shop Now →</a></div>
+                    <div class="category-card"><div class="category-icon"><i class="fas fa-oil-can"></i></div><h3>Essential Oils</h3><p>Pure therapeutic grade</p><a href="category.html?cat=essential-oils">Shop Now →</a></div>
+                    <div class="category-card"><div class="category-icon"><i class="fas fa-leaf"></i></div><h3>Dried Herbs</h3><p>Organic & sustainably sourced</p><a href="category.html?cat=dried-herbs">Shop Now →</a></div>
+                    <div class="category-card"><div class="category-icon"><i class="fas fa-capsules"></i></div><h3>Supplements</h3><p>Support your health naturally</p><a href="category.html?cat=supplements">Shop Now →</a></div>
+                    <div class="category-card"><div class="category-icon"><i class="fas fa-spa"></i></div><h3>Natural Skincare</h3><p>Clean beauty essentials</p><a href="category.html?cat=natural-skincare">Shop Now →</a></div>
+                    <div class="category-card"><div class="category-icon"><i class="fas fa-heartbeat"></i></div><h3>Wellness</h3><p>Holistic health products</p><a href="category.html?cat=wellness">Shop Now →</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RafaDoc Section -->
+        <section class="rafadoc-section">
+            <div class="container">
+                <div class="rafadoc-content">
+                    <div class="rafadoc-text">
+                        <span class="rafadoc-tag">RafaDoc</span>
+                        <h2>Expert Herbal <span class="highlight">Consultation</span></h2>
+                        <p>Connect with certified medical herbalists for personalized wellness guidance. Get professional advice tailored to your health needs from the comfort of your home.</p>
+                        <div class="rafadoc-features">
+                            <div class="feature"><i class="fas fa-user-md"></i><span>15+ Expert Herbalists</span></div>
+                            <div class="feature"><i class="fas fa-clock"></i><span>30-60 Min Sessions</span></div>
+                            <div class="feature"><i class="fas fa-video"></i><span>Video/Call/In-Person</span></div>
+                            <div class="feature"><i class="fas fa-chart-line"></i><span>Personalized Plans</span></div>
+                        </div>
+                        <div class="rafadoc-buttons">
+                            <a href="rafadoc.html" class="btn btn-primary">Book Consultation <i class="fas fa-calendar-check"></i></a>
+                            <a href="rafadoc.html#how-it-works" class="btn btn-outline">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="rafadoc-image">
+                        <img src="https://placehold.co/500x400/000000/FFFFFF?text=Herbal+Consultation" alt="Herbal Consultation">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Herbal Encyclopedia Section -->
+        <section class="herbal-encyclopedia-section">
+            <div class="container">
+                <div class="herbal-encyclopedia-content">
+                    <div class="herbal-encyclopedia-text">
+                        <span class="herbal-encyclopedia-tag">Herbal Encyclopedia</span>
+                        <h2>Explore <span class="highlight">African Medicinal Plants</span></h2>
+                        <p>Discover the rich herbal heritage of Ghana and Africa. Learn about traditional healing plants, their uses, and how to identify them in the wild.</p>
+                        <div class="herbal-features">
+                            <div class="feature"><i class="fas fa-leaf"></i><span>100+ Medicinal Plants</span></div>
+                            <div class="feature"><i class="fas fa-book-open"></i><span>Traditional Wisdom</span></div>
+                            <div class="feature"><i class="fas fa-search"></i><span>Identification Guides</span></div>
+                            <div class="feature"><i class="fas fa-mortar-pestle"></i><span>Preparation Methods</span></div>
+                        </div>
+                        <div class="herbal-buttons">
+                            <a href="herbal-encyclopedia.html" class="btn btn-primary">Explore Plants <i class="fas fa-leaf"></i></a>
+                            <a href="herbal-encyclopedia.html#featured" class="btn btn-outline">Plant of the Month <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="herbal-encyclopedia-image">
+                        <img src="https://placehold.co/500x400/000000/FFFFFF?text=African+Plants" alt="African Medicinal Plants">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Forum Section -->
+        <section class="forum-section">
+            <div class="container">
+                <div class="forum-content">
+                    <div class="forum-text">
+                        <span class="forum-tag">Community Forum</span>
+                        <h2>Join the <span class="highlight">Herbal Community</span></h2>
+                        <p>Connect with herbal enthusiasts, share traditional knowledge, ask questions, and grow your herbal journey with the RafaMall community.</p>
+                        <div class="forum-features">
+                            <div class="feature"><i class="fas fa-users"></i><span>2,500+ Members</span></div>
+                            <div class="feature"><i class="fas fa-comments"></i><span>1,200+ Discussions</span></div>
+                            <div class="feature"><i class="fas fa-leaf"></i><span>Expert Herbalists</span></div>
+                            <div class="feature"><i class="fas fa-award"></i><span>Earn Badges</span></div>
+                        </div>
+                        <div class="forum-buttons">
+                            <a href="forum.html" class="btn btn-primary">Join the Discussion <i class="fas fa-users"></i></a>
+                            <a href="forum.html#categories" class="btn btn-outline">Explore Topics <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="forum-image">
+                        <img src="https://placehold.co/500x400/000000/FFFFFF?text=Community+Forum" alt="Community Forum">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Products</h2>
+                    <p>Handpicked just for you</p>
+                </div>
+                <div class="products-grid" id="featuredProductsGrid"></div>
+                <div class="view-all">
+                    <a href="shop.html" class="btn btn-outline">View All Products <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Sellers -->
+        <section class="best-sellers">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Best Sellers</h2>
+                    <p>Customer favorites you'll love</p>
+                </div>
+                <div class="products-grid" id="bestSellersGrid"></div>
+                <div class="view-all">
+                    <a href="shop.html" class="btn btn-outline">View All Best Sellers <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="new-arrivals">
+            <div class="container">
+                <div class="section-header">
+                    <h2>New Arrivals</h2>
+                    <p>Fresh from nature, just for you</p>
+                </div>
+                <div class="products-grid" id="newArrivalsGrid"></div>
+                <div class="view-all">
+                    <a href="shop.html" class="btn btn-outline">View All New Arrivals <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Banner -->
+        <section class="promo-banner">
+            <div class="container">
+                <div class="promo-content">
+                    <div class="promo-text">
+                        <h3>Flash Sale!</h3>
+                        <h2>Don't Miss Out on <span>Limited Time Offers</span></h2>
+                        <p>Free shipping on orders over $50. Hurry, stocks are limited!</p>
+                        <div class="countdown" id="countdown">
+                            <div class="countdown-item"><span id="days">00</span><span>Days</span></div>
+                            <div class="countdown-item"><span id="hours">00</span><span>Hours</span></div>
+                            <div class="countdown-item"><span id="minutes">00</span><span>Mins</span></div>
+                            <div class="countdown-item"><span id="seconds">00</span><span>Secs</span></div>
+                        </div>
+                        <a href="shop.html" class="btn btn-primary">Shop Flash Deals</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <p>Get the latest updates on new products and upcoming sales</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="rafadoc.html">RafaDoc</a></li>
+                        <li><a href="herbal-encyclopedia.html">Herbal Encyclopedia</a></li>
+                        <li><a href="forum.html">Community Forum</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 54 820 5657</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/quickview.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/wishlist.js"></script>
+</body>
+</html>

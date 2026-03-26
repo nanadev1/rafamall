@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbal Encyclopedia - Ghana & African Medicinal Plants | RafaMall</title>
+    <meta name="description" content="Explore Ghana's rich herbal heritage. Learn about African medicinal plants, their uses, identification, and traditional healing wisdom.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/herbal-encyclopedia.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="wishlist.html" class="header-action">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="wishlist-count-badge cart-count" id="wishlistCountBadge">0</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="rafadoc.html">RafaDoc</a></li>
+                    <li><a href="herbal-encyclopedia.html" class="active">Herbal Encyclopedia</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="nav-contact">
+                    <a href="tel:+233548205657" class="contact-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+233 54 820 5657</span>
+                    </a>
+                </div>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="category.html?cat=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="category.html?cat=essential-oils">Essential Oils</a></li>
+                        <li><a href="category.html?cat=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="category.html?cat=supplements">Supplements</a></li>
+                        <li><a href="category.html?cat=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="category.html?cat=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="encyclopedia-hero">
+            <div class="container">
+                <div class="encyclopedia-hero-content">
+                    <div class="encyclopedia-hero-text">
+                        <span class="hero-badge">Herbal Encyclopedia</span>
+                        <h1>Ghana & African<br><span class="highlight">Medicinal Plants</span></h1>
+                        <p>Discover the rich herbal heritage of Africa. Learn about traditional medicinal plants, their uses, and how to identify them in the wild.</p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Medicinal Plants</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Indigenous Species</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">1000+</span>
+                                <span class="stat-label">Years of Wisdom</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="encyclopedia-hero-image">
+                        <img src="https://placehold.co/500x500/000000/FFFFFF?text=African+Herbs" alt="African Medicinal Plants">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filter Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" id="plantSearch" placeholder="Search by plant name, use, or condition...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Plants</button>
+                    <button class="filter-btn" data-filter="ghana">Ghanaian Herbs</button>
+                    <button class="filter-btn" data-filter="west-africa">West African</button>
+                    <button class="filter-btn" data-filter="popular">Most Popular</button>
+                    <button class="filter-btn" data-filter="medicinal">Medicinal</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plant Categories -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="categories-grid">
+                    <div class="category-card" data-category="immune">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Immune Support</h3>
+                        <p>Plants that boost immunity</p>
+                    </div>
+                    <div class="category-card" data-category="digestive">
+                        <i class="fas fa-stomach"></i>
+                        <h3>Digestive Health</h3>
+                        <p>For gut health and digestion</p>
+                    </div>
+                    <div class="category-card" data-category="respiratory">
+                        <i class="fas fa-lungs"></i>
+                        <h3>Respiratory</h3>
+                        <p>For coughs and colds</p>
+                    </div>
+                    <div class="category-card" data-category="skin">
+                        <i class="fas fa-hand-sparkles"></i>
+                        <h3>Skin Care</h3>
+                        <p>For healthy skin</p>
+                    </div>
+                    <div class="category-card" data-category="stress">
+                        <i class="fas fa-brain"></i>
+                        <h3>Stress & Sleep</h3>
+                        <p>Calming and relaxing herbs</p>
+                    </div>
+                    <div class="category-card" data-category="malaria">
+                        <i class="fas fa-bug"></i>
+                        <h3>Malaria & Fever</h3>
+                        <p>Traditional remedies</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plants Grid -->
+        <section class="plants-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>African Medicinal Plants</h2>
+                    <p>Explore our comprehensive guide to Ghanaian and African herbs</p>
+                </div>
+                <div class="plants-grid" id="plantsGrid">
+                    <!-- Plants will be loaded via JavaScript -->
+                </div>
+                <div class="load-more" id="loadMoreBtn">
+                    <button class="btn btn-outline">Load More Plants <i class="fas fa-arrow-down"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Plant of the Month -->
+        <section class="featured-plant">
+            <div class="container">
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="https://placehold.co/400x400/000000/FFFFFF?text=Moringa" alt="Moringa">
+                        <span class="featured-badge">Plant of the Month</span>
+                    </div>
+                    <div class="featured-content">
+                        <h2>Moringa Oleifera</h2>
+                        <p class="local-name">Local Names: Zogale (Hausa), Gawara (Hausa), Ewe Igbale (Yoruba)</p>
+                        <div class="featured-details">
+                            <div class="detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Native to: Ghana, Nigeria, West Africa</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Harvest Season: Year-round</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-star"></i>
+                                <span>Traditional Uses: Immune support, nutrition, anti-inflammatory</span>
+                            </div>
+                        </div>
+                        <p>The "Miracle Tree" is one of Africa's most valuable medicinal plants. Every part of the moringa tree has healing properties - leaves, seeds, bark, and roots. Rich in vitamins, minerals, and antioxidants.</p>
+                        <a href="plant-detail.html?id=moringa" class="btn btn-primary">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Traditional Healing Wisdom -->
+        <section class="wisdom-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Traditional Healing Wisdom</h2>
+                    <p>Generations of knowledge passed down through African healers</p>
+                </div>
+                <div class="wisdom-grid">
+                    <div class="wisdom-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3>Holistic Approach</h3>
+                        <p>African traditional medicine treats the whole person - body, mind, and spirit - not just symptoms.</p>
+                    </div>
+                    <div class="wisdom-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Sustainable Harvesting</h3>
+                        <p>Traditional healers practice ethical harvesting, ensuring plants regenerate for future generations.</p>
+                    </div>
+                    <div class="wisdom-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Community Knowledge</h3>
+                        <p>Healing wisdom is shared within communities, preserving cultural heritage and traditional practices.</p>
+                    </div>
+                    <div class="wisdom-card">
+                        <i class="fas fa-mortar-pestle"></i>
+                        <h3>Preparation Methods</h3>
+                        <p>Traditional preparations include decoctions, infusions, poultices, and powders passed down for centuries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h3>Subscribe to Herbal Wisdom</h3>
+                    <p>Get monthly plant profiles, traditional remedies, and herbal tips delivered to your inbox</p>
+                    <form id="herbalNewsletter">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Plant Detail Modal -->
+    <div id="plantModal" class="plant-modal">
+        <div class="plant-overlay"></div>
+        <div class="plant-container">
+            <div class="plant-content">
+                <button class="plant-close" id="plantClose"><i class="fas fa-times"></i></button>
+                <div id="plantDetailBody" class="plant-body">
+                    <!-- Plant details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="rafadoc.html">RafaDoc</a></li>
+                        <li><a href="herbal-encyclopedia.html">Herbal Encyclopedia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 54 820 5657</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/herbal-encyclopedia.js"></script>
+</body>
+</html>

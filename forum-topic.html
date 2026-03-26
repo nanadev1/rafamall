@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Topic - Herbal Wisdom | RafaMall Community</title>
+    <meta name="description" content="Join the discussion on herbal remedies, traditional healing, and natural wellness.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/forum.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="wishlist.html" class="header-action">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                        <span class="wishlist-count-badge cart-count" id="wishlistCountBadge">0</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="rafadoc.html">RafaDoc</a></li>
+                    <li><a href="herbal-encyclopedia.html">Herbal Encyclopedia</a></li>
+                    <li><a href="forum.html" class="active">Forum</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="nav-contact">
+                    <a href="tel:+233548205657" class="contact-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+233 54 820 5657</span>
+                    </a>
+                </div>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="category.html?cat=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="category.html?cat=essential-oils">Essential Oils</a></li>
+                        <li><a href="category.html?cat=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="category.html?cat=supplements">Supplements</a></li>
+                        <li><a href="category.html?cat=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="category.html?cat=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumb -->
+        <div class="forum-breadcrumb">
+            <div class="container">
+                <a href="forum.html"><i class="fas fa-home"></i> Forum</a> / 
+                <a href="forum.html#categories">Herbal Remedies Discussion</a> / 
+                <span>What's the best way to prepare moringa leaves for maximum benefits?</span>
+            </div>
+        </div>
+
+        <!-- Topic Content -->
+        <section class="topic-section">
+            <div class="container">
+                <div class="topic-header">
+                    <div class="topic-title-section">
+                        <span class="topic-pinned"><i class="fas fa-thumbtack"></i> Pinned</span>
+                        <h1>What's the best way to prepare moringa leaves for maximum benefits?</h1>
+                    </div>
+                    <div class="topic-meta">
+                        <div class="topic-category">Category: Herbal Remedies Discussion</div>
+                        <div class="topic-stats">
+                            <span><i class="fas fa-reply"></i> 12 replies</span>
+                            <span><i class="fas fa-eye"></i> 234 views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Posts Container -->
+                <div class="posts-container" id="postsContainer">
+                    <!-- Post 1 - Original Post -->
+                    <div class="post-card" id="post-1">
+                        <div class="post-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Herbalist_Amara</h4>
+                                <div class="author-title">Master Herbalist</div>
+                                <div class="author-badges">
+                                    <span class="badge">🌿 Top Contributor</span>
+                                    <span class="badge">🏆 Plant Expert</span>
+                                </div>
+                                <div class="author-stats">
+                                    <span><i class="fas fa-comment"></i> 1,234 posts</span>
+                                    <span><i class="fas fa-star"></i> 5,678 reputation</span>
+                                </div>
+                                <div class="author-joined">Joined March 2026</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-date">Posted 3 days ago</div>
+                            <div class="post-body">
+                                <p>I've been growing moringa in my backyard and I'm harvesting leaves for the first time. I've heard so much about the incredible health benefits - high in vitamins, minerals, and antioxidants.</p>
+                                <p>What's the best way to prepare moringa leaves to get maximum nutritional benefits? Should I eat them fresh, dry them for powder, or cook them? I've seen people make tea, add to soups, and even blend into smoothies.</p>
+                                <p>Also, how much should I consume daily? Any advice would be greatly appreciated! 🙏</p>
+                            </div>
+                            <div class="post-actions">
+                                <button class="post-action-btn like-btn" data-post="1">
+                                    <i class="far fa-heart"></i> <span>24</span>
+                                </button>
+                                <button class="post-action-btn reply-btn">
+                                    <i class="far fa-comment"></i> Reply
+                                </button>
+                                <button class="post-action-btn share-btn">
+                                    <i class="fas fa-share-alt"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 - Reply -->
+                    <div class="post-card reply">
+                        <div class="post-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Dr. Sarah Chen</h4>
+                                <div class="author-title">Clinical Herbalist</div>
+                                <div class="author-badges">
+                                    <span class="badge">⚕️ Medical Expert</span>
+                                    <span class="badge">🎓 Educator</span>
+                                </div>
+                                <div class="author-stats">
+                                    <span><i class="fas fa-comment"></i> 432 posts</span>
+                                    <span><i class="fas fa-star"></i> 8,765 reputation</span>
+                                </div>
+                                <div class="author-joined">Joined January 2026</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-date">Posted 2 days ago</div>
+                            <div class="post-body">
+                                <p>Great question! Moringa is truly a nutritional powerhouse. Here's what I recommend:</p>
+                                <p><strong>1. Fresh Leaves:</strong> Fresh moringa leaves have the highest vitamin C content. Add them to salads, smoothies, or lightly steam them. The leaves lose some vitamin C when cooked, but other nutrients remain stable.</p>
+                                <p><strong>2. Dried Powder:</strong> Drying leaves (in shade, not direct sun) and grinding into powder concentrates the nutrients. One tablespoon of moringa powder provides significant amounts of iron, calcium, and protein. Store in an airtight container away from light.</p>
+                                <p><strong>3. Tea:</strong> Steep fresh or dried leaves in hot water for 5-7 minutes. This is excellent for a gentle energy boost without caffeine.</p>
+                                <p><strong>For daily consumption:</strong> Start with 1 teaspoon of powder or 1 cup of fresh leaves per day. You can gradually increase to 1-2 tablespoons of powder or 1-2 cups of fresh leaves. Always listen to your body!</p>
+                                <p><strong>Important note:</strong> If you're pregnant, breastfeeding, or on medication, consult with a healthcare provider before adding moringa to your routine.</p>
+                            </div>
+                            <div class="post-actions">
+                                <button class="post-action-btn like-btn" data-post="2">
+                                    <i class="far fa-heart"></i> <span>45</span>
+                                </button>
+                                <button class="post-action-btn reply-btn">
+                                    <i class="far fa-comment"></i> Reply
+                                </button>
+                                <button class="post-action-btn share-btn">
+                                    <i class="fas fa-share-alt"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 - Reply -->
+                    <div class="post-card reply">
+                        <div class="post-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Kwame_GH</h4>
+                                <div class="author-title">Traditional Healer</div>
+                                <div class="author-badges">
+                                    <span class="badge">📜 Storyteller</span>
+                                    <span class="badge">🌍 African Wisdom</span>
+                                </div>
+                                <div class="author-stats">
+                                    <span><i class="fas fa-comment"></i> 876 posts</span>
+                                    <span><i class="fas fa-star"></i> 4,321 reputation</span>
+                                </div>
+                                <div class="author-joined">Joined February 2026</div>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-date">Posted 2 days ago</div>
+                            <div class="post-body">
+                                <p>In Ghana, we've been using moringa (we call it "Zogale") for generations. Here's how my grandmother taught me:</p>
+                                <p><strong>Traditional preparation:</strong> We pound fresh leaves with a mortar and pestle, then add to soups and stews. The heat from cooking releases the nutrients but makes it easier to digest.</p>
+                                <p><strong>For maximum benefit:</strong> My grandmother would combine moringa with groundnuts (peanuts) and palm oil - the healthy fats help absorb the fat-soluble vitamins (A, E, K).</p>
+                                <p><strong>Her special tonic:</strong> Blend fresh moringa leaves with ginger, honey, and lemon juice. Take one tablespoon in the morning for energy and immunity. Works wonders during rainy season!</p>
+                                <p>Pro tip: Moringa seeds are also valuable. They can be eaten fresh (they taste like peas) or dried and ground for a protein-rich addition to meals.</p>
+                            </div>
+                            <div class="post-actions">
+                                <button class="post-action-btn like-btn" data-post="3">
+                                    <i class="far fa-heart"></i> <span>32</span>
+                                </button>
+                                <button class="post-action-btn reply-btn">
+                                    <i class="far fa-comment"></i> Reply
+                                </button>
+                                <button class="post-action-btn share-btn">
+                                    <i class="fas fa-share-alt"></i> Share
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reply Form -->
+                <div class="reply-form-container">
+                    <h3>Reply to this discussion</h3>
+                    <form id="replyForm" class="reply-form">
+                        <textarea id="replyContent" rows="6" placeholder="Share your knowledge or ask a follow-up question..."></textarea>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Post Reply <i class="fas fa-paper-plane"></i></button>
+                            <a href="forum.html" class="btn btn-outline">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Similar Discussions -->
+                <div class="similar-discussions">
+                    <h3>Similar Discussions</h3>
+                    <div class="similar-list">
+                        <div class="similar-item">
+                            <a href="#">Moringa seeds vs leaves - which is more nutritious?</a>
+                            <span>12 replies</span>
+                        </div>
+                        <div class="similar-item">
+                            <a href="#">Growing moringa in containers: tips for beginners</a>
+                            <span>8 replies</span>
+                        </div>
+                        <div class="similar-item">
+                            <a href="#">Moringa for breastfeeding mothers: is it safe?</a>
+                            <span>24 replies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="rafadoc.html">RafaDoc</a></li>
+                        <li><a href="herbal-encyclopedia.html">Herbal Encyclopedia</a></li>
+                        <li><a href="forum.html">Community Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 54 820 5657</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/forum.js"></script>
+    <script src="js/forum-topic.js"></script>
+</body>
+</html>

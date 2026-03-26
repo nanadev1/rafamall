@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - RafaMall | Herbal & Natural Products</title>
+    <meta name="description" content="Manage your account, view orders, and update profile at RafaMall.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/account.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <h1>Rafa<span>Mall</span></h1>
+                    </a>
+                </div>
+                <div class="header-search">
+                    <form id="searchForm">
+                        <input type="text" placeholder="Search for herbs, teas, supplements..." id="searchInput">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="header-actions">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <a href="account.html" class="header-action active">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <a href="cart.html" class="header-action cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="nav-contact">
+                    <a href="tel:+233548205657" class="contact-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+233 54 820 5657</span>
+                    </a>
+                </div>
+                <div class="nav-categories">
+                    <span><i class="fas fa-bars"></i> Categories</span>
+                    <ul class="categories-dropdown">
+                        <li><a href="category.html?cat=herbal-teas">Herbal Teas</a></li>
+                        <li><a href="category.html?cat=essential-oils">Essential Oils</a></li>
+                        <li><a href="category.html?cat=dried-herbs">Dried Herbs</a></li>
+                        <li><a href="category.html?cat=supplements">Supplements</a></li>
+                        <li><a href="category.html?cat=natural-skincare">Natural Skincare</a></li>
+                        <li><a href="category.html?cat=wellness">Wellness</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>My Account</h1>
+                <p>Manage your profile, orders, and preferences</p>
+            </div>
+        </section>
+
+        <!-- Account Section -->
+        <section class="account-section">
+            <div class="container">
+                <!-- Login/Register Forms (shown when not logged in) -->
+                <div id="authContainer" class="auth-container">
+                    <div class="auth-tabs">
+                        <button class="auth-tab active" data-tab="login">Login</button>
+                        <button class="auth-tab" data-tab="register">Register</button>
+                    </div>
+                    
+                    <!-- Login Form -->
+                    <div id="loginForm" class="auth-form active">
+                        <h2>Welcome Back</h2>
+                        <p>Login to access your account</p>
+                        <form id="loginFormElement">
+                            <div class="form-group">
+                                <label for="loginEmail">Email Address</label>
+                                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="loginPassword">Password</label>
+                                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                                <button type="button" class="toggle-password" data-target="loginPassword">
+                                    <i class="far fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="rememberMe"> Remember me
+                                </label>
+                                <a href="#" class="forgot-password">Forgot Password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </form>
+                        <div class="auth-footer">
+                            <p>Don't have an account? <a href="#" id="switchToRegister">Register now</a></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Register Form -->
+                    <div id="registerForm" class="auth-form">
+                        <h2>Create Account</h2>
+                        <p>Join RafaMall for exclusive benefits</p>
+                        <form id="registerFormElement">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="regFirstName">First Name</label>
+                                    <input type="text" id="regFirstName" placeholder="First name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="regLastName">Last Name</label>
+                                    <input type="text" id="regLastName" placeholder="Last name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="regEmail">Email Address</label>
+                                <input type="email" id="regEmail" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="regPhone">Phone Number</label>
+                                <input type="tel" id="regPhone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="regPassword">Password</label>
+                                <input type="password" id="regPassword" placeholder="Create a password" required>
+                                <button type="button" class="toggle-password" data-target="regPassword">
+                                    <i class="far fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="form-group">
+                                <label for="regConfirmPassword">Confirm Password</label>
+                                <input type="password" id="regConfirmPassword" placeholder="Confirm your password" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletterSignup" checked>
+                                    <span>Subscribe to our newsletter for wellness tips and offers</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="termsAgree" required>
+                                    <span>I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                        </form>
+                        <div class="auth-footer">
+                            <p>Already have an account? <a href="#" id="switchToLogin">Login here</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard (shown when logged in) -->
+                <div id="dashboardContainer" class="dashboard-container" style="display: none;">
+                    <div class="dashboard-layout">
+                        <!-- Sidebar -->
+                        <aside class="dashboard-sidebar">
+                            <div class="user-info" id="userInfo">
+                                <div class="user-avatar">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <h3 id="userName">Guest User</h3>
+                                <p id="userEmail">user@example.com</p>
+                            </div>
+                            <nav class="dashboard-nav">
+                                <a href="#" class="dashboard-nav-item active" data-section="overview">
+                                    <i class="fas fa-tachometer-alt"></i> Overview
+                                </a>
+                                <a href="#" class="dashboard-nav-item" data-section="orders">
+                                    <i class="fas fa-shopping-bag"></i> My Orders
+                                </a>
+                                <a href="#" class="dashboard-nav-item" data-section="profile">
+                                    <i class="fas fa-user-edit"></i> Profile Settings
+                                </a>
+                                <a href="#" class="dashboard-nav-item" data-section="addresses">
+                                    <i class="fas fa-map-marker-alt"></i> Addresses
+                                </a>
+                                <a href="#" class="dashboard-nav-item" data-section="wishlist">
+                                    <i class="fas fa-heart"></i> Wishlist
+                                </a>
+                                <a href="#" class="dashboard-nav-item" data-section="security">
+                                    <i class="fas fa-shield-alt"></i> Security
+                                </a>
+                                <a href="#" id="logoutBtn" class="dashboard-nav-item logout">
+                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                </a>
+                            </nav>
+                        </aside>
+                        
+                        <!-- Main Content -->
+                        <div class="dashboard-content">
+                            <!-- Overview Section -->
+                            <div id="overviewSection" class="dashboard-section active">
+                                <h2>Welcome back, <span id="welcomeName">Guest</span>!</h2>
+                                <div class="stats-grid">
+                                    <div class="stat-card">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <div>
+                                            <h3 id="totalOrders">0</h3>
+                                            <p>Total Orders</p>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <i class="fas fa-heart"></i>
+                                        <div>
+                                            <h3 id="wishlistCount">0</h3>
+                                            <p>Wishlist Items</p>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <i class="fas fa-truck"></i>
+                                        <div>
+                                            <h3 id="pendingOrders">0</h3>
+                                            <p>Pending Orders</p>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <i class="fas fa-star"></i>
+                                        <div>
+                                            <h3>Member</h3>
+                                            <p>Member Since</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="recent-orders">
+                                    <h3>Recent Orders</h3>
+                                    <div id="recentOrdersList" class="orders-list">
+                                        <p class="no-data">No orders yet. Start shopping!</p>
+                                    </div>
+                                    <a href="#" class="view-all-link" data-section="orders">View All Orders →</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Orders Section -->
+                            <div id="ordersSection" class="dashboard-section">
+                                <h2>My Orders</h2>
+                                <div id="ordersList" class="orders-list-full">
+                                    <p class="no-data">No orders yet.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Profile Section -->
+                            <div id="profileSection" class="dashboard-section">
+                                <h2>Profile Settings</h2>
+                                <form id="profileForm">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="profileFirstName">First Name</label>
+                                            <input type="text" id="profileFirstName">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="profileLastName">Last Name</label>
+                                            <input type="text" id="profileLastName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profileEmail">Email Address</label>
+                                        <input type="email" id="profileEmail">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profilePhone">Phone Number</label>
+                                        <input type="tel" id="profilePhone">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </form>
+                            </div>
+                            
+                            <!-- Addresses Section -->
+                            <div id="addressesSection" class="dashboard-section">
+                                <h2>My Addresses</h2>
+                                <div class="addresses-header">
+                                    <button class="btn btn-outline" id="addAddressBtn">
+                                        <i class="fas fa-plus"></i> Add New Address
+                                    </button>
+                                </div>
+                                <div id="addressesList" class="addresses-grid">
+                                    <p class="no-data">No addresses saved. Add your first address.</p>
+                                </div>
+                                
+                                <!-- Add Address Modal -->
+                                <div id="addressModal" class="modal" style="display: none;">
+                                    <div class="modal-content">
+                                        <h3>Add New Address</h3>
+                                        <form id="addressForm">
+                                            <div class="form-group">
+                                                <label>Full Name</label>
+                                                <input type="text" id="addressName" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Street Address</label>
+                                                <input type="text" id="addressStreet" required>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <label>City</label>
+                                                    <input type="text" id="addressCity" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>State</label>
+                                                    <input type="text" id="addressState" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <label>Postal Code</label>
+                                                    <input type="text" id="addressZip" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Country</label>
+                                                    <select id="addressCountry">
+                                                        <option value="US">United States</option>
+                                                        <option value="CA">Canada</option>
+                                                        <option value="UK">United Kingdom</option>
+                                                        <option value="NG">Nigeria</option>
+                                                        <option value="GH">Ghana</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="modal-buttons">
+                                                <button type="button" class="btn btn-outline" id="closeAddressModal">Cancel</button>
+                                                <button type="submit" class="btn btn-primary">Save Address</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Wishlist Section -->
+                            <div id="wishlistSection" class="dashboard-section">
+                                <h2>My Wishlist</h2>
+                                <div id="wishlistGrid" class="wishlist-grid">
+                                    <p class="no-data">Your wishlist is empty. Start adding products!</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Security Section -->
+                            <div id="securitySection" class="dashboard-section">
+                                <h2>Security Settings</h2>
+                                <form id="passwordForm">
+                                    <div class="form-group">
+                                        <label for="currentPassword">Current Password</label>
+                                        <input type="password" id="currentPassword" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="newPassword">New Password</label>
+                                        <input type="password" id="newPassword" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirmNewPassword">Confirm New Password</label>
+                                        <input type="password" id="confirmNewPassword" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Update Password</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Rafa<span>Mall</span></h3>
+                    <p>Your trusted source for premium herbal and natural products. Nature's best, delivered to your door.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="returns.html">Returns Policy</a></li>
+                        <li><a href="shipping.html">Shipping Information</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +233 54 820 5657</li>
+                        <li><i class="fas fa-envelope"></i> support@rafamall.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Commerce St, New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RafaMall. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html>

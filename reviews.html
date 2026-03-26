@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Reviews - RafaMall</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="reviews-demo">
+            <h1>Product Reviews Demo</h1>
+            <p>Click "View Reviews" on any product to see the review system</p>
+            
+            <!-- Sample Product Card -->
+            <div class="sample-product">
+                <div class="product-card" data-id="1">
+                    <div class="product-image">
+                        <img src="https://placehold.co/300x300/000000/FFFFFF?text=Product" alt="Product">
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Chamomile Tea</h3>
+                        <div class="product-price">$12.99</div>
+                        <button class="btn btn-primary view-reviews-btn" data-product-id="1">
+                            <i class="fas fa-star"></i> View Reviews (4.8)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="review-modal">
+        <div class="review-overlay"></div>
+        <div class="review-container">
+            <div class="review-content">
+                <button class="review-close" id="reviewClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="reviewBody" class="review-body">
+                    <!-- Reviews will load here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/reviews.js"></script>
+</body>
+</html>
